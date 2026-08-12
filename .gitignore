@@ -1,0 +1,21 @@
+# Dependencies and generated output
+node_modules/
+dist/
+
+# Local working material and visual QA evidence
+tmp/
+audit-evidence-*/
+implementation-*.png
+design-qa-*.png
+
+# Internal research and pilot/client deliverables; not needed to build the landing
+public/pilot/
+docs/pilot/
+AGENTS.md
+*-audit-*.md
+market-research-*.md
+design-qa.md
+ux-audit-*.md
+
+# System files
+.DS_Store
