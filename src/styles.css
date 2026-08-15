@@ -89,11 +89,21 @@ dt {
 }
 
 .brand {
-  font-family: var(--serif);
-  font-size: 30px;
-  line-height: 1;
-  letter-spacing: 0.025em;
+  display: inline-flex;
   justify-self: start;
+  align-items: center;
+  line-height: 0;
+}
+
+.brand img {
+  display: block;
+  width: 158px;
+  height: auto;
+}
+
+.brand--mark img {
+  width: 34px;
+  height: 34px;
 }
 
 .site-header nav {
@@ -1730,6 +1740,80 @@ dt {
 }
 
 @media (max-width: 760px) {
+  /* Mobile-only reading scale: preserve the editorial hierarchy while keeping copy comfortable at arm's length. */
+  .button,
+  .header-cta,
+  .text-link,
+  .text-link--light {
+    font-size: 13px;
+  }
+
+  .section-heading > p,
+  .section-heading--wide > p,
+  .budget-section .section-heading > p,
+  .section-heading--split > p,
+  .hero__copy > p,
+  .swap-section__panel > p,
+  .result-card > p,
+  .project-card p,
+  .faq details > p,
+  .offer-section__title > p,
+  .modal__heading > p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .process-board__head > span,
+  .project-cart__head > span,
+  .budget-slider__value span,
+  .budget-slider__scale,
+  .budget-ledger__meta,
+  .result-card__preview--budget > span,
+  .result-card__preview--budget dl > div,
+  .site-footer span,
+  .yandex-form-modal__intro > span {
+    font-size: 11px;
+  }
+
+  .process-board__head h3,
+  .project-cart h3 {
+    font-size: 25px;
+    line-height: 1.05;
+  }
+
+  .project-cart__item span,
+  .project-cart__total span {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .project-cart__item strong {
+    font-size: 22px;
+  }
+
+  .swap-options button,
+  .offer-card header span,
+  .offer-card li {
+    font-size: 13px;
+  }
+
+  .swap-options button {
+    min-height: 58px;
+  }
+
+  .swap-options button strong {
+    font-size: 22px;
+  }
+
+  .result-card h3 {
+    font-size: 27px;
+    line-height: 1.08;
+  }
+
+  .result-card__preview--budget dl > div {
+    line-height: 1.35;
+  }
+
   main#top {
     padding-top: 62px;
   }
@@ -1749,7 +1833,16 @@ dt {
   }
 
   .brand {
-    font-size: 26px;
+    line-height: 0;
+  }
+
+  .brand img {
+    width: 134px;
+  }
+
+  .brand--mark img {
+    width: 30px;
+    height: 30px;
   }
 
   .site-header nav {
@@ -1758,7 +1851,7 @@ dt {
 
   .header-cta {
     display: inline-flex;
-    font-size: 11px;
+    min-height: 44px;
     gap: 7px;
   }
 
@@ -1790,7 +1883,6 @@ dt {
 
   .hero__copy > p {
     margin-top: 16px;
-    font-size: 12px;
   }
 
   .hero__actions {
@@ -1802,12 +1894,13 @@ dt {
   }
 
   .text-link--light {
-    font-size: 11px;
+    min-height: 44px;
   }
 
   .product-pin {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
   }
 
   .product-pin--one {
@@ -1900,7 +1993,6 @@ dt {
   .budget-section .section-heading > p,
   .section-heading--split > p {
     margin-top: 20px;
-    font-size: 12px;
   }
 
   .process-board {
@@ -1912,13 +2004,13 @@ dt {
   }
 
   .process-board article {
-    height: 350px;
-    min-height: 350px;
+    height: 392px;
+    min-height: 392px;
     border: 1px solid var(--line);
   }
 
   .process-board__plan {
-    min-height: 350px !important;
+    min-height: 392px !important;
   }
 
   .process-board__arrow {
@@ -1929,8 +2021,8 @@ dt {
 
   .project-cart {
     grid-column: auto;
-    height: 350px;
-    min-height: 350px;
+    height: 392px;
+    min-height: 392px;
     padding: 18px;
     border: 1px solid var(--line);
     display: flex;
@@ -1976,7 +2068,8 @@ dt {
 
   .budget-ledger__estimate p {
     margin-top: 12px;
-    font-size: 10px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .budget-ledger__meta {
@@ -2006,7 +2099,6 @@ dt {
 
   .swap-section__panel > p {
     padding: 30px 20px 0;
-    font-size: 12px;
   }
 
   .swap-options {
@@ -2035,7 +2127,6 @@ dt {
 
   .result-card > p {
     margin-top: 5px;
-    font-size: 11px;
   }
 
   .examples__grid {
@@ -2064,7 +2155,6 @@ dt {
 
   .offer-section__title > p {
     margin-top: 20px;
-    font-size: 12px;
   }
 
   .offer-card {

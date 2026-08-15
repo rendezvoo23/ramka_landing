@@ -110,10 +110,12 @@ function track(name, payload = {}) {
   window.dispatchEvent(new CustomEvent("landing:event", { detail }));
 }
 
-function Brand() {
+function Brand({ variant = "wordmark" }) {
+  const isMark = variant === "mark";
+
   return (
-    <a className="brand" href="#top" aria-label="РАМКА — на главную">
-      РАМКА
+    <a className={`brand${isMark ? " brand--mark" : ""}`} href="#top" aria-label="РАМКА — на главную">
+      <img src={isMark ? "/assets/ramka-icon.svg" : "/assets/ramka-ai-logo.svg"} alt="" />
     </a>
   );
 }
@@ -463,7 +465,7 @@ export function App() {
       </section>
 
       <footer className="site-footer">
-        <Brand />
+        <Brand variant="mark" />
         <nav className="site-footer__legal" aria-label="Юридическая информация">
           <span>Политика обработки данных</span>
           <span>Согласие на обработку данных</span>
