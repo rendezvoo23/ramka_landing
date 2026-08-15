@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -14,6 +14,10 @@ export default defineConfig({
     warmup: {
       clientFiles: ["./src/main.jsx"],
     },
+  },
+  preview: {
+    host: "0.0.0.0",
+    allowedHosts: ["ramka.ai", "www.ramka.ai"],
   },
   plugins: [react()],
 });
